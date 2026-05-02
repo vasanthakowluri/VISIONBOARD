@@ -1,0 +1,15 @@
+{
+	"name": "adfdevlorealus",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "5ede56a6-0f9a-4c8a-8c10-ee4dd23cf689",
+		"tenantId": "2405b952-c859-4307-a72b-7f443f201008"
+	}
+}
