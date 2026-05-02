@@ -1,0 +1,66 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfdevlorealus"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"COPYSWITCH_accountKey": {
+			"value": ""
+		},
+		"LS_SWITCH_accountKey": {
+			"value": ""
+		},
+		"LS_SWITCH_SINK_accountKey": {
+			"value": ""
+		},
+		"ls_delete_accountKey": {
+			"value": ""
+		},
+		"ls_loggingaccount_accountKey": {
+			"value": ""
+		},
+		"ls_sink_switch_accountKey": {
+			"value": ""
+		},
+		"lsswitch_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://adlsdevlorealus.dfs.core.windows.net"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://adlsdevlorealus.dfs.core.windows.net"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://mysecretekeyvault.vault.azure.net/"
+		},
+		"COPYSWITCH_properties_typeProperties_url": {
+			"value": "https://adlsdevlorealus.dfs.core.windows.net/"
+		},
+		"LS_SWITCH_properties_typeProperties_url": {
+			"value": "https://adlsdevlorealus.dfs.core.windows.net/"
+		},
+		"LS_SWITCH_SINK_properties_typeProperties_url": {
+			"value": "https://adlsdevlorealus.dfs.core.windows.net/"
+		},
+		"ls_delete_properties_typeProperties_url": {
+			"value": "https://adlsdevlorealus.dfs.core.windows.net/"
+		},
+		"ls_loggingaccount_properties_typeProperties_url": {
+			"value": "https://adlsdevlorealus.dfs.core.windows.net/"
+		},
+		"ls_sink_switch_properties_typeProperties_url": {
+			"value": "https://adlsdevlorealus.dfs.core.windows.net/"
+		},
+		"lsswitch_properties_typeProperties_url": {
+			"value": "https://adlsdevlorealus.dfs.core.windows.net/"
+		}
+	}
+}

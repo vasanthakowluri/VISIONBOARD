@@ -1,0 +1,195 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adfdevlorealus"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage2'"
+		},
+		"COPYSWITCH_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'COPYSWITCH'"
+		},
+		"LS_SWITCH_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_SWITCH'"
+		},
+		"LS_SWITCH_SINK_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_SWITCH_SINK'"
+		},
+		"ls_delete_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_delete'"
+		},
+		"ls_loggingaccount_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_loggingaccount'"
+		},
+		"ls_sink_switch_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_sink_switch'"
+		},
+		"lsswitch_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'lsswitch'"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevlorealus.dfs.core.windows.net"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevlorealus.dfs.core.windows.net"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://mysecretekeyvault.vault.azure.net/"
+		},
+		"COPYSWITCH_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevlorealus.dfs.core.windows.net/"
+		},
+		"LS_SWITCH_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevlorealus.dfs.core.windows.net/"
+		},
+		"LS_SWITCH_SINK_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevlorealus.dfs.core.windows.net/"
+		},
+		"ls_delete_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevlorealus.dfs.core.windows.net/"
+		},
+		"ls_loggingaccount_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevlorealus.dfs.core.windows.net/"
+		},
+		"ls_sink_switch_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevlorealus.dfs.core.windows.net/"
+		},
+		"lsswitch_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevlorealus.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adfdevlorealus_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					},
+					"AzureDataLakeStorage2_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage2_accountKey')]"
+					},
+					"COPYSWITCH_accountKey": {
+						"value": "[parameters('COPYSWITCH_accountKey')]"
+					},
+					"LS_SWITCH_accountKey": {
+						"value": "[parameters('LS_SWITCH_accountKey')]"
+					},
+					"LS_SWITCH_SINK_accountKey": {
+						"value": "[parameters('LS_SWITCH_SINK_accountKey')]"
+					},
+					"ls_delete_accountKey": {
+						"value": "[parameters('ls_delete_accountKey')]"
+					},
+					"ls_loggingaccount_accountKey": {
+						"value": "[parameters('ls_loggingaccount_accountKey')]"
+					},
+					"ls_sink_switch_accountKey": {
+						"value": "[parameters('ls_sink_switch_accountKey')]"
+					},
+					"lsswitch_accountKey": {
+						"value": "[parameters('lsswitch_accountKey')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage2_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage2_properties_typeProperties_url')]"
+					},
+					"AzureKeyVault1_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					},
+					"COPYSWITCH_properties_typeProperties_url": {
+						"value": "[parameters('COPYSWITCH_properties_typeProperties_url')]"
+					},
+					"LS_SWITCH_properties_typeProperties_url": {
+						"value": "[parameters('LS_SWITCH_properties_typeProperties_url')]"
+					},
+					"LS_SWITCH_SINK_properties_typeProperties_url": {
+						"value": "[parameters('LS_SWITCH_SINK_properties_typeProperties_url')]"
+					},
+					"ls_delete_properties_typeProperties_url": {
+						"value": "[parameters('ls_delete_properties_typeProperties_url')]"
+					},
+					"ls_loggingaccount_properties_typeProperties_url": {
+						"value": "[parameters('ls_loggingaccount_properties_typeProperties_url')]"
+					},
+					"ls_sink_switch_properties_typeProperties_url": {
+						"value": "[parameters('ls_sink_switch_properties_typeProperties_url')]"
+					},
+					"lsswitch_properties_typeProperties_url": {
+						"value": "[parameters('lsswitch_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "adfdevlorealus_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adfdevlorealus_ArmTemplate_0')]"
+			]
+		}
+	]
+}
