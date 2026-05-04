@@ -1,0 +1,22 @@
+{
+	"name": "LS_PARENT_SQLSERVER",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "Migrating data from on premises to ADLS.",
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "MSI",
+			"database": "visionboardproject",
+			"encrypt": "optional",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "sa",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI0MzJkMzU0YS1kZGFjLTQ4ZWMtYWQyOS02MDIxYTdkMDc4ODMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
