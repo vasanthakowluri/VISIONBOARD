@@ -7,81 +7,65 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adfdevlorealus"
 		},
-		"AzureDataLakeStorage1_accountKey": {
+		"LS_PARENT_SQLSERVER_password": {
 			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+			"metadata": "Secure string for 'password' of 'LS_PARENT_SQLSERVER'"
 		},
-		"AzureDataLakeStorage2_accountKey": {
+		"LS_CHILD_SQLSERVER_password": {
 			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage2'"
+			"metadata": "Secure string for 'password' of 'LS_CHILD_SQLSERVER'"
 		},
-		"COPYSWITCH_accountKey": {
+		"ADLS_SQL_PARQUET_accountKey": {
 			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'COPYSWITCH'"
+			"metadata": "Secure string for 'accountKey' of 'ADLS_SQL_PARQUET'"
 		},
-		"LS_SWITCH_accountKey": {
+		"LS_ONPREM_SQLSERVER_password": {
 			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'LS_SWITCH'"
-		},
-		"LS_SWITCH_SINK_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'LS_SWITCH_SINK'"
-		},
-		"ls_delete_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'ls_delete'"
-		},
-		"ls_loggingaccount_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'ls_loggingaccount'"
-		},
-		"ls_sink_switch_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'ls_sink_switch'"
-		},
-		"lsswitch_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'lsswitch'"
-		},
-		"AzureDataLakeStorage1_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://adlsdevlorealus.dfs.core.windows.net"
-		},
-		"AzureDataLakeStorage2_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://adlsdevlorealus.dfs.core.windows.net"
+			"metadata": "Secure string for 'password' of 'LS_ONPREM_SQLSERVER'"
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"type": "string",
 			"defaultValue": "https://mysecretekeyvault.vault.azure.net/"
 		},
-		"COPYSWITCH_properties_typeProperties_url": {
+		"LS_PARENT_SQLSERVER_properties_typeProperties_server": {
 			"type": "string",
-			"defaultValue": "https://adlsdevlorealus.dfs.core.windows.net/"
+			"defaultValue": "MSI"
 		},
-		"LS_SWITCH_properties_typeProperties_url": {
+		"LS_PARENT_SQLSERVER_properties_typeProperties_database": {
 			"type": "string",
-			"defaultValue": "https://adlsdevlorealus.dfs.core.windows.net/"
+			"defaultValue": "visionboardproject"
 		},
-		"LS_SWITCH_SINK_properties_typeProperties_url": {
+		"LS_PARENT_SQLSERVER_properties_typeProperties_userName": {
 			"type": "string",
-			"defaultValue": "https://adlsdevlorealus.dfs.core.windows.net/"
+			"defaultValue": "sa"
 		},
-		"ls_delete_properties_typeProperties_url": {
+		"LS_CHILD_SQLSERVER_properties_typeProperties_server": {
 			"type": "string",
-			"defaultValue": "https://adlsdevlorealus.dfs.core.windows.net/"
+			"defaultValue": "MSI"
 		},
-		"ls_loggingaccount_properties_typeProperties_url": {
+		"LS_CHILD_SQLSERVER_properties_typeProperties_database": {
 			"type": "string",
-			"defaultValue": "https://adlsdevlorealus.dfs.core.windows.net/"
+			"defaultValue": "visionboardproject"
 		},
-		"ls_sink_switch_properties_typeProperties_url": {
+		"LS_CHILD_SQLSERVER_properties_typeProperties_userName": {
 			"type": "string",
-			"defaultValue": "https://adlsdevlorealus.dfs.core.windows.net/"
+			"defaultValue": "sa"
 		},
-		"lsswitch_properties_typeProperties_url": {
+		"ADLS_SQL_PARQUET_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "https://adlsdevlorealus.dfs.core.windows.net/"
+			"defaultValue": "https://adlsdevlorealus.dfs.core.windows.net"
+		},
+		"LS_ONPREM_SQLSERVER_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "MSI"
+		},
+		"LS_ONPREM_SQLSERVER_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "visionboardproject"
+		},
+		"LS_ONPREM_SQLSERVER_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sa"
 		},
 		"containerUri": {
 			"type": "string",
@@ -110,86 +94,54 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"AzureDataLakeStorage1_accountKey": {
-						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					"ADLS_SQL_PARQUET_accountKey": {
+						"value": "[parameters('ADLS_SQL_PARQUET_accountKey')]"
 					},
-					"AzureDataLakeStorage2_accountKey": {
-						"value": "[parameters('AzureDataLakeStorage2_accountKey')]"
+					"LS_PARENT_SQLSERVER_password": {
+						"value": "[parameters('LS_PARENT_SQLSERVER_password')]"
 					},
-					"COPYSWITCH_accountKey": {
-						"value": "[parameters('COPYSWITCH_accountKey')]"
+					"LS_CHILD_SQLSERVER_password": {
+						"value": "[parameters('LS_CHILD_SQLSERVER_password')]"
 					},
-					"LS_SWITCH_accountKey": {
-						"value": "[parameters('LS_SWITCH_accountKey')]"
-					},
-					"LS_SWITCH_SINK_accountKey": {
-						"value": "[parameters('LS_SWITCH_SINK_accountKey')]"
-					},
-					"ls_delete_accountKey": {
-						"value": "[parameters('ls_delete_accountKey')]"
-					},
-					"ls_loggingaccount_accountKey": {
-						"value": "[parameters('ls_loggingaccount_accountKey')]"
-					},
-					"ls_sink_switch_accountKey": {
-						"value": "[parameters('ls_sink_switch_accountKey')]"
-					},
-					"lsswitch_accountKey": {
-						"value": "[parameters('lsswitch_accountKey')]"
-					},
-					"AzureDataLakeStorage1_properties_typeProperties_url": {
-						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
-					},
-					"AzureDataLakeStorage2_properties_typeProperties_url": {
-						"value": "[parameters('AzureDataLakeStorage2_properties_typeProperties_url')]"
+					"LS_ONPREM_SQLSERVER_password": {
+						"value": "[parameters('LS_ONPREM_SQLSERVER_password')]"
 					},
 					"AzureKeyVault1_properties_typeProperties_baseUrl": {
 						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
 					},
-					"COPYSWITCH_properties_typeProperties_url": {
-						"value": "[parameters('COPYSWITCH_properties_typeProperties_url')]"
+					"ADLS_SQL_PARQUET_properties_typeProperties_url": {
+						"value": "[parameters('ADLS_SQL_PARQUET_properties_typeProperties_url')]"
 					},
-					"LS_SWITCH_properties_typeProperties_url": {
-						"value": "[parameters('LS_SWITCH_properties_typeProperties_url')]"
+					"LS_PARENT_SQLSERVER_properties_typeProperties_server": {
+						"value": "[parameters('LS_PARENT_SQLSERVER_properties_typeProperties_server')]"
 					},
-					"LS_SWITCH_SINK_properties_typeProperties_url": {
-						"value": "[parameters('LS_SWITCH_SINK_properties_typeProperties_url')]"
+					"LS_PARENT_SQLSERVER_properties_typeProperties_database": {
+						"value": "[parameters('LS_PARENT_SQLSERVER_properties_typeProperties_database')]"
 					},
-					"ls_delete_properties_typeProperties_url": {
-						"value": "[parameters('ls_delete_properties_typeProperties_url')]"
+					"LS_PARENT_SQLSERVER_properties_typeProperties_userName": {
+						"value": "[parameters('LS_PARENT_SQLSERVER_properties_typeProperties_userName')]"
 					},
-					"ls_loggingaccount_properties_typeProperties_url": {
-						"value": "[parameters('ls_loggingaccount_properties_typeProperties_url')]"
+					"LS_CHILD_SQLSERVER_properties_typeProperties_server": {
+						"value": "[parameters('LS_CHILD_SQLSERVER_properties_typeProperties_server')]"
 					},
-					"ls_sink_switch_properties_typeProperties_url": {
-						"value": "[parameters('ls_sink_switch_properties_typeProperties_url')]"
+					"LS_CHILD_SQLSERVER_properties_typeProperties_database": {
+						"value": "[parameters('LS_CHILD_SQLSERVER_properties_typeProperties_database')]"
 					},
-					"lsswitch_properties_typeProperties_url": {
-						"value": "[parameters('lsswitch_properties_typeProperties_url')]"
+					"LS_CHILD_SQLSERVER_properties_typeProperties_userName": {
+						"value": "[parameters('LS_CHILD_SQLSERVER_properties_typeProperties_userName')]"
+					},
+					"LS_ONPREM_SQLSERVER_properties_typeProperties_server": {
+						"value": "[parameters('LS_ONPREM_SQLSERVER_properties_typeProperties_server')]"
+					},
+					"LS_ONPREM_SQLSERVER_properties_typeProperties_database": {
+						"value": "[parameters('LS_ONPREM_SQLSERVER_properties_typeProperties_database')]"
+					},
+					"LS_ONPREM_SQLSERVER_properties_typeProperties_userName": {
+						"value": "[parameters('LS_ONPREM_SQLSERVER_properties_typeProperties_userName')]"
 					}
 				}
 			},
 			"dependsOn": []
-		},
-		{
-			"name": "adfdevlorealus_ArmTemplate_1",
-			"type": "Microsoft.Resources/deployments",
-			"apiVersion": "2024-03-01",
-			"properties": {
-				"mode": "incremental",
-				"templateLink": {
-					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
-					"contentVersion": "1.0.0.0"
-				},
-				"parameters": {
-					"factoryName": {
-						"value": "[parameters('factoryName')]"
-					}
-				}
-			},
-			"dependsOn": [
-				"[resourceId('Microsoft.Resources/deployments', 'adfdevlorealus_ArmTemplate_0')]"
-			]
 		}
 	]
 }
